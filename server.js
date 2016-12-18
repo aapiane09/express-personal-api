@@ -163,7 +163,6 @@ app.get('/api', function api_index(req, res) {
 });
 
 app.get('/api/profile', function profile(req, res) {
-    var profile = '/api/profile';
     res.json({
         name: "Alessandro Pianetta",
         githubUsername: "aapiane09",
@@ -172,7 +171,7 @@ app.get('/api/profile', function profile(req, res) {
         personalSiteLink: "https://aapiane09.github.io/"
         currentCity: "Concord, CA",
         pet: []
-    });
+    })
 });
 
 /**********
