@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   $.ajax({
     method: 'GET',
-    url: '/api/profile',
+    url: 'https://blooming-hamlet-27001.herokuapp.com/api/profile',
     success: handleSuccess,
     error: handleError
   });
