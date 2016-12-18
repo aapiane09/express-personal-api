@@ -35,16 +35,16 @@
       </div>
       <div class="row">
         <div class="col-md-6" id="profile">
-        <style id="handlebars-profile" type="text/x-handlebars-template">
-          <img src="{{githubProfilePic}}" alt="me">
+        <script id="handlebars-profile" type="text/x-handlebars-template">
+          <img src="{{profile.githubProfilePic}}" alt="me">
           <ul>
-            <li>{{name}}</li>
-            <li>{{email}}</li>
-            <li>{{githubUsername}}</li>
-            <li>{{currentCity}}</li>
-            <li>{{languages}}</li>
+            <li>{{profile.name}}</li>
+            <li>{{profile.email}}</li>
+            <li>{{profile.githubUsername}}</li>
+            <li>{{profile.currentCity}}</li>
+            <li>{{profile.languages}}</li>
           </ul>
-          </style>
+        </script>
         </div>
         <div class="col-md-6" id="api-info">
           <button class="btn btn-primary games" type="button" name="games">Games</button>

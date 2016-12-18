@@ -166,12 +166,12 @@ app.get('/api/profile', function profile(req, res) {
     var profile = '/api/profile';
     res.json({
         name: "Alessandro Pianetta",
-        email: "aapiane09@gmail.com",
-        githubProfilePic: '<img src="./public/images/IMG_0630.JPG">',
         githubUsername: "aapiane09",
         githubLink: "https://github.com/aapiane09",
+        githubProfileImage: "http://i.imgur.com/1CcLEwm.jpg",
+        personalSiteLink: "https://aapiane09.github.io/"
         currentCity: "Concord, CA",
-        languages: ["English", "Japanese", "German"]
+        pet: []
     });
 });
 
