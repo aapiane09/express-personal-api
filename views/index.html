@@ -8,6 +8,7 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Glory+Hallelujah|Indie+Flower|Josefin+Sans|Lobster|Molle:400i|Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
 
     <!-- VENDOR SCRIPTS -->
@@ -21,8 +22,38 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <h1>Under Construction</h1>
-          <h4><a href="/api">Read My API Documentation</a></h4>
+          <h1>api-anetta</h1>
+          <br><br>
+          <h4>
+            <a class="api" href="/api">Read My API Documentation</a>
+            <a class="git" href="https://github.com/aapiane09">Look at my Github Repo</a>
+          </h4>
+          <br>
+          <hr style="clear: both;">
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6" id="profile">
+        <style id="handlebars-profile" type="text/x-handlebars-template">
+          <img src="{{githubProfilePic}}" alt="me">
+          <ul>
+            <li>{{name}}</li>
+            <li>{{email}}</li>
+            <li>{{githubUsername}}</li>
+            <li>{{currentCity}}</li>
+            <li>{{languages}}</li>
+          </ul>
+          </style>
+        </div>
+        <div class="col-md-6" id="api-info">
+          <button class="btn btn-primary games" type="button" name="games">Games</button>
+          <button class="btn btn-primary movies" type="button" name="movies">Movies</button>
+          <button class="btn btn-primary music" type="button" name="music">Music</button>
+          <button class="btn btn-primary tv" type="button" name="televison">TV Shows</button>
+          <button class="btn btn-primary places" type="button" name="places">Places</button>
+          <button class="btn btn-primary foods" type="button" name="foods">Foods</button>
+          <button class="btn btn-success suggest" type="button" name="suggestion">Suggestions</button>
         </div>
       </div>
     </div>
