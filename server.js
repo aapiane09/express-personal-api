@@ -168,7 +168,7 @@ app.get('/api/profile', function profile(req, res) {
         githubUsername: "aapiane09",
         githubLink: "https://github.com/aapiane09",
         githubProfileImage: "http://i.imgur.com/1CcLEwm.jpg",
-        personalSiteLink: "https://aapiane09.github.io/"
+        personalSiteLink: "https://aapiane09.github.io/",
         currentCity: "Concord, CA",
         pet: []
     })
