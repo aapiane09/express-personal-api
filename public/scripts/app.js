@@ -7,16 +7,18 @@ $(document).ready(function(){
 
   $.ajax({
     method: 'GET',
-    url: 'https://blooming-hamlet-27001.herokuapp.com/api/profile',
+    url: '/api/profile',
+    dataType: "json",
     success: handleSuccess,
     error: handleError
   });
 
   function handleSuccess (data) {
-    data.forEach(function (data){
-      var profileHtml = template({profile : data});
-      $('#profile').append(profileHtml);
-    });
+    console.log("Success!")
+    // data.forEach(function (data){
+    //   var profileHtml = template({profile : data});
+    //   $('#profile').append(profileHtml);
+    // });
   };
 
   function handleError (error) {

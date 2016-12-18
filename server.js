@@ -1,6 +1,7 @@
 // require express and other modules
 var express = require('express'),
-    app = express();
+    app = express(),
+    mongoose = require('mongoose');
 
 // parse incoming urlencoded form data
 // and populate the req.body object
@@ -41,8 +42,16 @@ app.get('/', function homepage(req, res) {
     });
 });
 
-app.get('/api/profile', function profile(req, res) {
-    res.json();
+app.get('/api/profile', function(req, res) {
+    res.json({
+        name: "Alessandro Pianetta",
+        githubUsername: "aapiane09",
+        githubLink: "https://github.com/aapiane09",
+        githubProfileImage: "http://i.imgur.com/1CcLEwm.jpg",
+        personalSiteLink: "https://aapiane09.github.io/",
+        currentCity: "Concord, CA",
+        pet: false
+    })
 });
 
 // Get all games
@@ -162,17 +171,7 @@ app.get('/api', function api_index(req, res) {
     })
 });
 
-app.get('/api/profile', function profile(req, res) {
-    res.json({
-        name: "Alessandro Pianetta",
-        githubUsername: "aapiane09",
-        githubLink: "https://github.com/aapiane09",
-        githubProfileImage: "http://i.imgur.com/1CcLEwm.jpg",
-        personalSiteLink: "https://aapiane09.github.io/",
-        currentCity: "Concord, CA",
-        pet: []
-    })
-});
+
 
 /**********
  * SERVER *
