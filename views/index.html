@@ -8,7 +8,7 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Glory+Hallelujah|Indie+Flower|Josefin+Sans|Lobster|Molle:400i|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Josefin+Sans|Lobster|Molle:400i|Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
 
     <!-- VENDOR SCRIPTS -->
@@ -36,15 +36,14 @@
       <div class="row">
         <div class="col-md-6" id="profile">
         <script id="handlebars-profile" type="text/x-handlebars-template">
-          <img src="{{profile.githubProfileImage}}" alt="me">
-          <br>
-          <ul>
-            <li>{{profile.name}}</li>
-            <li>{{profile.githubUsername}}</li>
-            <li>{{profile.githubLink}}</li>
-            <li>{{profile.personalSiteLink}}</li>
-            <li>{{profile.currentCity}}</li>
-            <li>{{profile.pet}}</li>
+          <ul class="profile">
+            <li><img src="{{profile.githubProfileImage}}" alt="me"></li>
+            <br><br>
+            <li>Name : {{profile.name}}</li>
+            <li>Github Username : {{profile.githubUsername}}</li>
+            <li>Github : <a href="{{profile.githubLink}}">My Repo</a></li>
+            <li>Personal Site : <a href="{{profile.personalSiteLink}}">Portfolio</a></li>
+            <li>Current City : {{profile.currentCity}}</li>
           </ul>
         </script>
         </div>
