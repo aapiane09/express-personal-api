@@ -19,6 +19,7 @@ $(document).ready(function(){
   function handleSuccess (ajaxData) {
     console.log("Profile Success!")
     var profileHtml = template({profile : ajaxData});
+    console.log("Profile HTML", profileHtml)
     $('#profile').append(profileHtml);
   };
 
@@ -36,9 +37,9 @@ $(document).ready(function(){
 
     function handleGamesSuccess (ajaxGamesData) {
       console.log("Games Success!", ajaxGamesData)
-      var gamesHtml = template({games : ajaxGamesData});
+      var gamesHtml = gamesTemplate({games : ajaxGamesData});
       console.log("Games HTML", gamesHtml)
-      ajaxGamesData.forEach (function (gamesHtml){
+      ajaxGamesData.forEach (function (){
         $('#append-info').append(gamesHtml);
         console.log("Appending!")
       });
