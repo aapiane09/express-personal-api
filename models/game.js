@@ -6,7 +6,8 @@ var GameSchema = new Schema ({
   genre: String,
   publisher: String,
   console: String,
-  releaseDate: Date
+  releaseDate: Date,
+  img: String
 });
 
 var Game = mongoose.model('Game', GameSchema);

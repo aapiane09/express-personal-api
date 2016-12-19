@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -8,7 +9,7 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Josefin+Sans|Lobster|Molle:400i|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
 
     <!-- VENDOR SCRIPTS -->
@@ -17,46 +18,69 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1>api-anetta</h1>
-          <br><br>
-          <h4>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>api-anetta</h1>
+                <br><br>
+                <h4>
             <a class="api" href="/api">Read My API Documentation</a>
             <a class="git" href="https://github.com/aapiane09">Look at my Github Repo</a>
           </h4>
-          <br>
-          <hr style="clear: both;">
-          <br>
+                <br>
+                <hr style="clear: both;">
+                <br>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6" id="profile">
-        <script id="handlebars-profile" type="text/x-handlebars-template">
-          <ul class="profile">
-            <li><img src="{{profile.githubProfileImage}}" alt="me"></li>
-            <br><br>
-            <li>Name : {{profile.name}}</li>
-            <li>Github Username : {{profile.githubUsername}}</li>
-            <li>Github : <a href="{{profile.githubLink}}">My Repo</a></li>
-            <li>Personal Site : <a href="{{profile.personalSiteLink}}">Portfolio</a></li>
-            <li>Current City : {{profile.currentCity}}</li>
-          </ul>
-        </script>
+        <div class="row">
+            <div class="col-md-6" id="profile">
+                <script id="profile-template" type="text/x-handlebars-template">
+                    <ul class="profile">
+                        <li><img src="{{profile.githubProfileImage}}" id="profilepic" alt="me"></li>
+                        <br><br>
+                        <li>Name : {{profile.name}}</li>
+                        <li>Github Username : {{profile.githubUsername}}</li>
+                        <li>Github : <a href="{{profile.githubLink}}">My Repo</a></li>
+                        <li>Personal Site : <a href="{{profile.personalSiteLink}}">Portfolio</a></li>
+                        <li>Current City : {{profile.currentCity}}</li>
+                    </ul>
+                </script>
+            </div>
+            <div class="col-md-6" id="api-info">
+                <button class="btn btn-primary" id="games" type="button" name="games">Games</button>
+                <button class="btn btn-primary" id="movies" type="button" name="movies">Movies</button>
+                <button class="btn btn-primary" id="music" type="button" name="music">Music</button>
+                <button class="btn btn-primary" id="tv" type="button" name="televison">TV Shows</button>
+                <button class="btn btn-primary" id="places" type="button" name="places">Places</button>
+                <button class="btn btn-primary" id="foods" type="button" name="foods">Foods</button>
+                <button class="btn btn-success" id="suggest" type="button" name="suggestion">Suggestions</button>
+                <br><br>
+                <div id="append-info">
+                  <p id="append-form"></p>
+                    <!-- Games Button -->
+                    <script id="games-template" type="text/x-handlebars-template">
+                            <div class="row background">
+                                <div class="col-md-5">
+                                    <img src="{{games.img}}" class="gameimage">
+                                </div>
+                                <div class="col-md-7">
+                                    <ul class="gameinfo">
+                                        <li>Title: {{game.title}}</li>
+                                        <li>Genre: {{games.genre}}</li>
+                                        <li>Publisher: {{games.publisher}}</li>
+                                        <li>Console: {{games.console}}</li>
+                                        <li>Released: {{games.releaseDate}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </script>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6" id="api-info">
-          <button class="btn btn-primary games" type="button" name="games">Games</button>
-          <button class="btn btn-primary movies" type="button" name="movies">Movies</button>
-          <button class="btn btn-primary music" type="button" name="music">Music</button>
-          <button class="btn btn-primary tv" type="button" name="televison">TV Shows</button>
-          <button class="btn btn-primary places" type="button" name="places">Places</button>
-          <button class="btn btn-primary foods" type="button" name="foods">Foods</button>
-          <button class="btn btn-success suggest" type="button" name="suggestion">Suggestions</button>
-        </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
